@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_bg_shape"
+    tools:context=".SelectActivity">
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progress_bar"
+        android:layout_marginTop="-8dp"
+        android:indeterminateTint="@color/teal_200"
+        android:scaleY="1.5"
+        android:indeterminate="true"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <ImageView
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_tutor"/>
+
+    <TextView
+        android:textSize="18sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/poppinssemibold"/>
+
+    <TextView
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please select your class.."
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/poppinsregular"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingVertical="8dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_editext">
+
+        <Spinner
+            android:id="@+id/spin_class"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:theme="@style/mySpinnerItemStyle" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:paddingVertical="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_editext">
+
+        <Spinner
+            android:id="@+id/spin_sections"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:theme="@style/mySpinnerItemStyle" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:background="@drawable/bg_editext">
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:hint="Please Enter Password"></EditText>
+    </RelativeLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:padding="10dp"
+        android:paddingHorizontal="20dp"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_button"
+        android:fontFamily="@font/poppinsregular"
+        android:id="@+id/btn_continue"
+        android:layout_gravity="center_horizontal"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg_shape"
+    tools:context=".AttendanceActivity">
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/ll_top"-->
+    <!--        android:layout_marginVertical="10dp"-->
+    <!--        android:layout_marginHorizontal="20dp"-->
+    <!--        android:weightSum="7"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_class_name"-->
+    <!--            android:fontFamily="@font/poppinssemibold"-->
+    <!--            android:layout_weight="4"-->
+    <!--            android:text="10th - A"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"/>-->
+
+    <!--        <TextView-->
+    <!--            android:gravity="center"-->
+    <!--            android:fontFamily="@font/poppinssemibold"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="P"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"/>-->
+
+    <!--        <TextView-->
+    <!--            android:gravity="center"-->
+    <!--            android:fontFamily="@font/poppinssemibold"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="L"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"/>-->
+
+    <!--        <TextView-->
+    <!--            android:gravity="center"-->
+    <!--            android:fontFamily="@font/poppinssemibold"-->
+    <!--            android:layout_weight="1"-->
+    <!--            android:text="A"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"/>-->
+
+    <!--    </LinearLayout>-->
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_class_info"
+        style="@style/Widget.AppCompat.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700">
+
+            <ImageView
+                android:id="@+id/iv_att"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_attendance"
+                app:tint="@color/white" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/iv_att"
+                android:fontFamily="@font/poppinssemibold"
+                android:text="Attendance Sheet"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@id/tv_class_name"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Class : "
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_class_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="10th - A1"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_students"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_class"
+                android:layout_alignRight="@id/tv_class"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="-3dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:text="Students  :"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_student_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_class"
+                android:layout_alignParentRight="true"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="-3dp"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@+id/tv_students"
+                android:fontFamily="@font/poppinsregular"
+                android:gravity="center"
+                android:text="X"
+                android:textColor="@color/black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_att"
+                android:layout_marginLeft="10dp">
+
+            <!--    <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Presents:"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/countpresents"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="20" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Absents:"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/countabsents"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="20" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Leaves:"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:id="@+id/countleaves"
+                        android:layout_marginStart="5dp"/>
+                </LinearLayout>
+
+-->
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_students"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/saveButton"
+        android:layout_below="@id/card_class_info"
+        android:layout_marginTop="5dp"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_student" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/teal_700"
+        android:visibility="gone" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/light_gray"
+        android:elevation="10dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_save"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_button"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Save"
+            android:textColor="@color/white" />
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
